@@ -1,6 +1,6 @@
-import requests
 import pandas as pd
 import datetime
+import requests
 
 
 class WxDataHP:
@@ -40,5 +40,3 @@ def update_current_data():
     r = requests.get(api)
     with open('hp-wx.dat', 'wb') as fd:
         fd.writelines(r.iter_content(chunk_size=128))
-
-wx_data_hp = WxDataHP()
