@@ -10,10 +10,11 @@ Make the bin
 uv sync --frozen  
 ```
 
-Install the update service and timer
+Install the unit and timer files
 
 ```
 cp rest-at-home.service rest-at-home.timer ~/.config/systemd/user/ 
+cp rest-at-home-api.service ~/.config/systemd/user
 ```
 
 Enable and start the timer
