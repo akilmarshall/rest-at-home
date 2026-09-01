@@ -1,7 +1,5 @@
-# from . import hp_wx
-
-# def main() -> None:
-#     print("Hello from rest-at-home!")
+def main() -> None:
+    pass
 
 
 def update():
