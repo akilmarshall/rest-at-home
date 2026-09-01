@@ -1,0 +1,13 @@
+[Unit]
+Description=rest-at-home FastAPI web server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=akil
+Group=akil
+WorkingDirectory=/home/akil/Project/rest-at-home
+ExecStart=/home/akil/Project/rest-at-home/.venv/bin/fastapi run main.py --host 0.0.0.0
+Restart=on-failure
+RestartSec=5
