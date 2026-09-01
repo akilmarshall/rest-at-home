@@ -4,16 +4,26 @@ So this project provides the in between with python and Fast API.
 
 # Deploy
 
-
-
+Make the bin
 
 ```
-# make the bin
 uv sync --frozen  
-# install the update service and timer
+```
+
+Install the update service and timer
+
+```
 cp rest-at-home.service rest-at-home.timer ~/.config/systemd/user/ 
-# enable and start the timer
+```
+
+Enable and start the timer
+
+```
 systemctl --user enable --now rest-at-home.timer
-# check timer
+```
+
+Check timer
+
+```
 systemctl --user list-timers rest-at-home.timer
 ```
