@@ -1,0 +1,10 @@
+[Unit]
+Description=Run rest-at-home.service
+
+[Timer]
+OnCalendar=*:*:10
+Persistent=false
+RandomizedDelaySec=10
+
+[Install]
+WantedBy=timers.target

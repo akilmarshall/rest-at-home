@@ -1,0 +1,11 @@
+[Unit]
+Description=Update the data file(s) for rest-at-home
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=akil
+Group=akil
+WorkingDirectory=/home/akil/Project/rest-at-home
+ExecStart=/home/akil/Project/rest-at-home/.venv/bin/update-at-home
