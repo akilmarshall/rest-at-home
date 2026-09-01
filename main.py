@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from rest_at_home import hp_wx
 
 app = FastAPI()
