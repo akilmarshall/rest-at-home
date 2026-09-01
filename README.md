@@ -17,10 +17,11 @@ cp rest-at-home.service rest-at-home.timer ~/.config/systemd/user/
 cp rest-at-home-api.service ~/.config/systemd/user
 ```
 
-Enable and start the timer
+Enable and start the timer and service
 
 ```
 systemctl --user enable --now rest-at-home.timer
+systemctl --user enable --now rest-at-home-api.service
 ```
 
 Check timer
