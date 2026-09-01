@@ -1,0 +1,22 @@
+graph G {
+	graph [layout=dot rankdir=LR]
+    node [shape=box]
+
+    internet [shape=egg]
+    subgraph cluster_0 {
+        label="Arbitrary API"
+        api1 [label="API X"]
+        api2 [label="API Y"]
+        api3 [label="API Z"]
+    }
+    subgraph cluster_1 {
+        label="FAST API to HA REST"
+        rat [label="rest-at-home\n(anything to JSON)"]
+        ha [label="Home Assistant\nRESTful integration"]
+    }
+
+    {api1 api2 api3} -- internet
+
+    internet -- rat
+    rat -- ha
+}
