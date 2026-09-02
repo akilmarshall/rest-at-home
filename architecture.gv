@@ -1,0 +1,21 @@
+digraph G {
+	graph [layout=dot rankdir=LR]
+
+    subgraph cluster_0 {
+        label="rest-at-home"
+
+        db [label="DB" shape=cylinder]
+        core [label="Python" shape=box3d]
+    }
+
+    api [label="API"]
+    ha [label="Home Assistant"]
+
+
+
+     core -> api [label="HTTP GET"]
+
+     api -> db
+
+     db -> ha [label="RESTful integration" dir=both]
+}
