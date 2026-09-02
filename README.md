@@ -49,14 +49,15 @@ There are two major components, **API** and **Sync**.
 ## API
 
 Implemented as a Fast API application.
-Reads from the database the API data in native format, the translation happens at request time.
+Reads from the database, API data in native format.
+Translation to JSON happens at request time.
 
 The uvicorn web server is managed as a systemd service.
 
 ## Sync
 
-Implemented with a single python function, it is availble as a uv script entry point.
-Uses requests to write the API data to the database in the native format.
+Implemented with a single python function, it is available as a uv script entry point.
+Writes API data into the database, with native format.
 
 ## Database
 
@@ -65,5 +66,5 @@ The root directory of this project is primary working directory.
 
 ## TODO
 
-- do the data conversion in Sync and not in API
-- upgrade the database to an in memory database
+- move the data conversion to Sync from API
+- upgrade the database to an in memory database (redis or memcached?)
